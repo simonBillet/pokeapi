@@ -24,8 +24,9 @@ export const DetailPokemon = () => {
     // Si non, on affiche un bouton pour l'ajouter aux favoris
     const verifFavoris = () => {
         let estFavoris = false
-        listPokemon.map(poke => {
-            if (poke.name === pokemon.name){
+
+        listPokemon.forEach(poke => {
+            if (poke.id === pokemon.id){
                 estFavoris = true
             }
         })
