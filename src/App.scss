@@ -1,0 +1,167 @@
+// Override default variables before the import
+$body-bg: #000;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
+
+body{
+  background-color: #0096C7;
+  min-width: 900px;
+}
+
+h1{
+  color: #2C2C2C;
+  text-align: center;
+  margin: 30px 0px;
+  font-size: 3em;
+}
+
+h2{
+  color: #2C2C2C;
+}
+
+p{
+  color: #2C2C2C;
+}
+
+.bouton-nav-liste-pokemon{
+  display: flex;
+  justify-content: center;
+}
+
+.bouton-changer-page{
+  border-color: #2C2C2C;
+  color: #2C2C2C;
+  background-color: white;
+  font-weight: bold;
+  padding: 0px 20px;
+}
+
+.numero-page{
+  margin: 0px 2%;
+  padding: 10px 15px;
+  background-color: white;
+  border: solid;
+  border-color: #2C2C2C;
+  border-width: 2.5px;
+  font-weight: bold;
+}
+
+.liste-pokemon{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-pokemon-liste{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 16%;
+  min-width: 60px;
+  margin: 10px 2%;
+}
+
+.bouton-pokemon-liste{
+  width: 100%;
+  border-color: #2C2C2C;
+  border-radius: 10px;
+  color: #2C2C2C;
+  font-weight: bold;
+}
+
+
+// Détail d'un pokémon ciblé
+
+.card-detail-pokemon{
+  background-color: floralwhite;
+  height: 100%;
+  padding: 10px;
+}
+
+.card-detail-pokemon-image{
+  width: 90%;
+  margin: 0px 5%;
+}
+
+.card-detail-bouton-ajouter-favoris, .card-detail-bouton-supprimer-favoris{
+  width: 90%;
+  margin: 10px 5%;
+  font-size: 1.5em;
+  border-color: #2C2C2C;
+  border-radius: 10px;
+}
+
+.card-detail-bouton-ajouter-favoris{
+  background-color: #008800;
+  color: white;
+}
+
+.card-detail-bouton-supprimer-favoris{
+  background-color: #C21F39;
+  color: #2C2C2C;
+}
+
+.card-detail-pokemon-nom, .card-pokemon-random-nom{
+  text-align: center;
+}
+
+.card-detail-pokemon-sous-titres, .card-pokemon-random-sous-titres{
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0px;
+}
+
+.card-detail-pokemon-image-type, .card-pokemon-random-image-type{
+  width: 30%;
+  margin: 0px 10%;
+}
+
+.card-detail-pokemon-div, .card-pokemon-random-div{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+}
+
+.card-detail-pokemon-texte, .card-pokemon-random-texte{
+  width: 46%;
+  margin: 10px 2%;
+}
+
+
+// Pokémon aléatoire
+
+.card-pokemon-random{
+  display: flex;
+  background-color: floralwhite;
+  height: 100%;
+  padding: 20px;
+}
+
+.card-pokemon-random-image{
+  width: 90%;
+  margin: 0px 5%;
+}
+
+.card-pokemon-random-texte-2{
+  width: 30%;
+  margin: 10px 1.5%;
+}
+
+
+// Liste pokémon selon leurs types
+
+.liste-type-pokemon{
+  margin: 0px 0.5%;
+}
+
+.liste-type-pokemon-image{
+  width: 10%;
+  margin: 20px 0.5%;
+}
+
+.opacity{
+  opacity: 0.3;
+}
