@@ -35,9 +35,9 @@ export const PokemonType = () => {
     // Si c'est le type sélectionné par l'utilsiateur alors il prendra une classe avec de l'opacity
     const imageDesTypes = (type) => {
         if(pokemons.name === type.name){
-            return(<img onClick={() => changertype(type.id)} className={"liste-type-pokemon-image opacity"} src={window.location.origin + '/types/' + type.name + '.png'}/>)
+            return(<img onClick={() => changertype(type.id)} className={"liste-type-pokemon-image opacity"} src={window.location.origin + '/types/' + type.name + '.png'} alt={"type"}/>)
         } else {
-            return(<img onClick={() => changertype(type.id)} className={"liste-type-pokemon-image"} src={window.location.origin + '/types/' + type.name + '.png'}/>)
+            return(<img onClick={() => changertype(type.id)} className={"liste-type-pokemon-image"} src={window.location.origin + '/types/' + type.name + '.png'} alt={"type"}/>)
         }
     }
 

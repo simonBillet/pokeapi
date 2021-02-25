@@ -50,14 +50,14 @@ export const DetailPokemon = () => {
     // Permet d'avoir les informations détaillé du pokémon
     const affichageDetailPokemon = (
         <div className={"card-detail-pokemon"}>
-            <img className={"card-detail-pokemon-image"} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.id + ".png"}/>
+            <img className={"card-detail-pokemon-image"} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.id + ".png"} alt={"pokemon"}/>
             <h2 className={"card-detail-pokemon-nom"}>{pokemon.name}</h2>
             {verifFavoris()}
             <p className={"card-detail-pokemon-sous-titres"}> Type(s) :</p>
             <div className={"card-detail-pokemon-div"}>
                 {pokemon.length !== 0
                     ?pokemon.types.map(type => (
-                        <img className={"card-detail-pokemon-image-type"} src={window.location.origin + '/types/' + type.type.name + '.png'}/>
+                        <img className={"card-detail-pokemon-image-type"} src={window.location.origin + '/types/' + type.type.name + '.png'} alt={"type"}/>
                     ))
                     :''
                 }

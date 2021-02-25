@@ -33,7 +33,7 @@ export const PokemonRandom = () => {
     const affichageDetailPokemon = (
         <div className={"card-pokemon-random"}>
             <div className={"col-sm-4"}>
-                <img className={"card-pokemon-random-image"} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.id + ".png"}/>
+                <img className={"card-pokemon-random-image"} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.id + ".png"} alt={"pokemon"}/>
                 <h2 className={"card-pokemon-random-nom"}>{pokemon.name}</h2>
             </div>
             <div className={"col-sm-8"}>
@@ -55,7 +55,7 @@ export const PokemonRandom = () => {
                 <div className={"card-pokemon-random-div"}>
                     {pokemon.length !== 0
                         ?pokemon.types.map(type => (
-                            <img className={"card-pokemon-random-image-type"} src={window.location.origin + '/types/' + type.type.name + '.png'}/>
+                            <img className={"card-pokemon-random-image-type"} src={window.location.origin + '/types/' + type.type.name + '.png'} alt={"type"}/>
                         ))
                         :''
                     }

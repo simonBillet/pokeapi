@@ -18,7 +18,7 @@ export const PokemonCardFavoris = () => {
     // Affichage des pokémons qui sont contenu dans la liste
     const pokemonCard = pokemons.map(pokemon => (
         <div className={"card-pokemon-liste"}>
-            <img onClick={() => pokemonCible(pokemon.name)} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.id + ".png"}/>
+            <img onClick={() => pokemonCible(pokemon.name)} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.id + ".png"} alt={"pokemon"}/>
             <button key={pokemon.name} onClick={() => pokemonCible(pokemon.name)} className={"bouton-pokemon-liste"}>{pokemon.name}</button>
         </div>
     ))
