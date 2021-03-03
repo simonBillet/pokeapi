@@ -5,11 +5,11 @@ import {DetailPokemon} from "./DetailPokemon";
 export const Favoris = () => {
     return(
         <div className="App container-fluid">
-            <h1>Favoris</h1>
-            <h2>Liste de mes favoris</h2>
+            <h1>Mes favoris</h1>
+            <h2>Liste de mes favoris :</h2>
             <div className={"row"}>
                 <div className={"col-sm-8"}>
-                    <div className={"liste-pokemon"}>
+                    <div className={"liste-pokemon"} role={"liste"}>
                         <PokemonCardFavoris/>
                     </div>
                 </div>

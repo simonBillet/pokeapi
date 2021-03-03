@@ -14,7 +14,6 @@ export const initialState = {
     listeMesFavoris: []
 }
 
-
 // Recherche d'une liste de pokémon
 export const requeteIndex = createAsyncThunk('pokemons/resultats',
     async query => {

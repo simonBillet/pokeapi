@@ -57,7 +57,7 @@ export const PokemonType = () => {
                     <h2>Liste selon le type sélectionné :</h2>
                     {pokemons.length !== 0
                         ?
-                        <div className={"liste-pokemon"}>
+                        <div className={"liste-pokemon"} role={"liste"}>
                             {status === 'succès' ?<PokemonCardType/> :<Spinner/>}
                         </div>
                         :<div></div>

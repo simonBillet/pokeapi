@@ -1,12 +1,19 @@
 import React, {useEffect} from "react";
 import {useDispatch} from "react-redux";
-import {requetePokemonId, selectDetailPokemonAleatoire, selectorStatusPokemonAleatoire} from "./pokemonsSlice";
+import {
+    ajouterPokemonMesFavoris,
+    requetePokemonId,
+    selectDetailPokemonAleatoire, selectListeMesFavoris,
+    selectorStatusPokemonAleatoire, supprimerPokemonMesFavoris
+} from "./pokemonsSlice";
 import { useSelector } from "react-redux";
 import {Spinner} from "./Spinner";
 
 export const PokemonRandom = () => {
     // Informa sur le pokémon
     const pokemon = useSelector(selectDetailPokemonAleatoire)
+
+    const listPokemon = useSelector(selectListeMesFavoris)
 
     // Status du pokémon
     const state = useSelector(selectorStatusPokemonAleatoire)
@@ -29,12 +36,42 @@ export const PokemonRandom = () => {
         }
     })
 
+    // On vérifie si le pokémon sélectionné est déjà un favoris
+    // Si oui, on affiche un bouton pour l'enlever des favoris
+    // Si non, on affiche un bouton pour l'ajouter aux favoris
+    const verifFavoris = () => {
+        let estFavoris = false
+
+        listPokemon.forEach(poke => {
+            if (poke.id === pokemon.id){
+                estFavoris = true
+            }
+        })
+
+        if (estFavoris){
+            return (<button className={"card-detail-bouton-supprimer-favoris"} onClick={supprimerPokemonFavoris} role={"Supprimer-favoris"}>Supprimer de mes favoris</button>)
+        } else {
+            return (<button className={"card-detail-bouton-ajouter-favoris"} onClick={ajouterPokemonFavoris} role={"Ajouter-favoris"}>Ajouter à mes favoris</button>)
+        }
+    }
+
+    // Permet d'ajouter le pokémon à la liste des pokémons favoris de l'utilisateur
+    const ajouterPokemonFavoris = () => {
+        dispatch(ajouterPokemonMesFavoris(pokemon))
+    }
+
+    // Permet de supprimer le pokémon de la liste des pokémons favoris
+    const supprimerPokemonFavoris = () => {
+        dispatch(supprimerPokemonMesFavoris(pokemon))
+    }
+
     // Permet d'avoir les informations détaillé du pokémon
     const affichageDetailPokemon = (
         <div className={"card-pokemon-random"}>
             <div className={"col-sm-4"}>
                 <img className={"card-pokemon-random-image"} src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.id + ".png"} alt={"pokemon"}/>
                 <h2 className={"card-pokemon-random-nom"}>{pokemon.name}</h2>
+                {verifFavoris()}
             </div>
             <div className={"col-sm-8"}>
                 <p className={"card-pokemon-random-sous-titres"}> Statistiques :</p>

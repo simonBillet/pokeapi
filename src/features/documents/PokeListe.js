@@ -52,7 +52,7 @@ export const PokeListe = () => {
                     </div>
                     {pokemons.length !== 0
                         ?
-                        <div className={"liste-pokemon"}>
+                        <div className={"liste-pokemon"} role={"liste"}>
                             {status === 'succès' ?<PokemonCard/> :<Spinner/>}
                         </div>
                         :<div></div>
