@@ -14,8 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Lint and test
     steps:
-      - uses:
-      - name: Test
+    - name: Test
       run: |
         npm run lint
         npm run test -- --coverage
