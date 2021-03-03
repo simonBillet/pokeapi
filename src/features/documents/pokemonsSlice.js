@@ -68,7 +68,7 @@ const pokemonSlice = createSlice({
                 console.log('début')
                 console.log(item)
                 console.log(pokemon)
-                return item.id !== pokemon.payload.id
+                return item.id !== pokemon.id
             })
         }
     },
