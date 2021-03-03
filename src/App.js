@@ -32,7 +32,6 @@ function App() {
         </ul>
       </nav>
 
-
       <Switch>
         <Route exact path="/">
           <Accueil />
