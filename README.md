@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Projet PokéApi 
+Réalisée par Simon BILLET
 
-## Available Scripts
+## Fonctionnalités présentes, manquantes et incomplètes
+La majorité des fonctionnalités qui ont été demandées sont présentes dans l'application. Les seuls
+fonctionnalités manquantes sont :
+- La possibilité de supprimer un pokémon des favoris
+- La barre de recherche dans les pokémons favoris
 
-In the project directory, you can run:
+Une fonctionnalité qui ne fonctionne pas complètement est le nombre qui permet de savoir à quel page nous 
+sommes lorsqu'on la change (reste à 1).
 
-### `npm start`
+## Logique d'organisation
+L'ensemble des éléments qui permettent de gérer l'app et les évènements sont dans le dossier `src`.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Dossier `Features`
+Ce projet est composé d'un seul service qui se trouve dans le dossier `Service`. Même si il n'y 
+a qu'un seul fichier je trouve cela plus logique dans un dossier pour s'organiser mais également
+si l'on doit ajouter de nouveaux services.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Les composants utilisées dans plusieurs pages ou autres composants se trouvent dans le dossier `Composants`.
 
-### `npm test`
+Les autres dossier qui sont `Accueil`, `Mes Favoris`, `PokeListe` et `PokemonParType` sont des dossiers qui correspondent à 
+chaque pages de l'application. Ces dossiers sont constitués d'un fichiers qui compose le squelette de la page. Et peut également
+contenir d'autres fichiers qui sont des composants propres à cette page.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Autres fichiers
+Le reste des fichiers utilisées sont le dossier `src` et les images des types de pokémon sont dans le dossier `public/types`.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Commit et branches
+Je n'ai réalisé aucun commit régulier du fait que projet Git ne fonctionnait pas au début. J'ai donc fait un seul gros commit
+une fois que tous les fonctionnalités ont été faites. L'ensemble du travail a été fait sur la branche `develop` et les quelques
+que commit qui a pu avoir sur la branche `master` sont ceux pour essayer de faire fonctionner les `.yml`.

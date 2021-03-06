@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.scss';
-import {Accueil} from "./features/documents/Accueil";
+import {Accueil} from "./features/Accueil/Accueil";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
-import {PokeListe} from "./features/documents/PokeListe";
-import {PokemonType} from "./features/documents/PokemonType";
-import {Favoris} from "./features/documents/Favoris";
+import {PokeListe} from "./features/PokeListe/PokeListe";
+import {PokemonType} from "./features/PokemonParType/PokemonType";
+import {Favoris} from "./features/MesFavoris/Favoris";
 
 function App() {
   return (

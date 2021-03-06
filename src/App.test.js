@@ -3,18 +3,18 @@ import reducer, {
     ajouterPokemonMesFavoris,
     initialState,
     selectListeMesFavoris
-} from './features/documents/pokemonsSlice';
+} from './features/Service/pokemonsSlice';
 import {fireEvent, render, screen} from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from './app/store';
-import {Accueil} from "./features/documents/Accueil";
+import {Accueil} from "./features/Accueil/Accueil";
 import App from "./App";
-import {PokemonRandom} from "./features/documents/PokemonRandom";
-import {PokemonCard} from "./features/documents/PokemonCard";
+import {PokemonRandom} from "./features/Accueil/PokemonRandom";
+import {PokemonCard} from "./features/PokemonParType/PokemonCard";
 import userEvent from "@testing-library/user-event";
-import {PokeListe} from "./features/documents/PokeListe";
-import {PokemonType} from "./features/documents/PokemonType";
-import {Favoris} from "./features/documents/Favoris";
+import {PokeListe} from "./features/PokeListe/PokeListe";
+import {PokemonType} from "./features/PokemonParType/PokemonType";
+import {Favoris} from "./features/MesFavoris/Favoris";
 
 describe('Tests sur la page d accueil', () => {
     test('Vérif. sur l initial state', () => {

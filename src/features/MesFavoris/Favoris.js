@@ -1,6 +1,6 @@
 import React from "react";
 import {PokemonCardFavoris} from "./PokemonCardFavoris";
-import {DetailPokemon} from "./DetailPokemon";
+import {DetailPokemon} from "../Composants/DetailPokemon";
 
 export const Favoris = () => {
     return(

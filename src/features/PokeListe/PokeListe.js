@@ -1,13 +1,13 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {DetailPokemon} from "./DetailPokemon";
-import {PokemonCard} from "./PokemonCard";
-import {Spinner} from "./Spinner";
+import {DetailPokemon} from "../Composants/DetailPokemon";
+import {PokemonCard} from "../PokemonParType/PokemonCard";
+import {Spinner} from "../Composants/Spinner";
 import {
     requeteIndex,
     selectorStatus,
     selectPokemonsListe,
-} from "./pokemonsSlice";
+} from "../Service/pokemonsSlice";
 
 export const PokeListe = () => {
     // Récupération des pokémons

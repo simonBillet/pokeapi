@@ -1,6 +1,6 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {requeteDetailPokemon, selectListeMesFavoris} from "./pokemonsSlice";
+import {requeteDetailPokemon, selectListeMesFavoris} from "../Service/pokemonsSlice";
 
 
 export const PokemonCardFavoris = () => {

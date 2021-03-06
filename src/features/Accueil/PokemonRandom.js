@@ -5,9 +5,9 @@ import {
     requetePokemonId,
     selectDetailPokemonAleatoire, selectListeMesFavoris,
     selectorStatusPokemonAleatoire, supprimerPokemonMesFavoris
-} from "./pokemonsSlice";
+} from "../Service/pokemonsSlice";
 import { useSelector } from "react-redux";
-import {Spinner} from "./Spinner";
+import {Spinner} from "../Composants/Spinner";
 
 export const PokemonRandom = () => {
     // Informa sur le pokémon

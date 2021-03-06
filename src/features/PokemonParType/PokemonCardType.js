@@ -1,6 +1,6 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {requeteDetailPokemon, selectPokemonListeType} from "./pokemonsSlice";
+import {requeteDetailPokemon, selectPokemonListeType} from "../Service/pokemonsSlice";
 
 
 export const PokemonCardType = () => {

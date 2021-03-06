@@ -5,7 +5,7 @@ import {
     selectDetailPokemonCible,
     selectListeMesFavoris,
     selectorStatusPokemonCible, supprimerPokemonMesFavoris
-} from "./pokemonsSlice";
+} from "../Service/pokemonsSlice";
 
 export const DetailPokemon = () => {
     // Variable contenant les informations sur le pokémon qui a été sélectionné
