@@ -16,12 +16,17 @@ import {PokeListe} from "./features/documents/PokeListe";
 import {PokemonType} from "./features/documents/PokemonType";
 import {Favoris} from "./features/documents/Favoris";
 
-describe('Premiers tests', () => {
+describe('Tests sur la page d accueil', () => {
+    test('Vérif. sur l initial state', () => {
+        const initState = initialState;
+        const restState = reducer(undefined, {});
+        expect(restState).toEqual(initState);
+    });
 
     test('Vérification que le mot Accueil apparait sur la page d accueil', () => {
-        const { getByText } = render(
+        const {getByText} = render(
             <Provider store={store}>
-                <Accueil />
+                <Accueil/>
             </Provider>
         );
 
@@ -59,22 +64,18 @@ describe('Premiers tests', () => {
 
         expect(estAjouter).toBeTruthy();
     });
+});
 
-    test('Vérif. sur l initial state', () => {
-        const initState = initialState;
-        const restState = reducer(undefined, {});
-        expect(restState).toEqual(initState);
-    });
-
+describe('Tests sur la page poke liste', () => {
     test('Vérification que le mot Poké liste soit bien affiché sur la page Poké liste', () => {
-        const { getByText } = render(
+        const {getByText} = render(
             <Provider store={store}>
-                <PokeListe />
+                <PokeListe/>
             </Provider>
         );
 
         expect(getByText(/Poké liste/i)).toBeInTheDocument();
-    })
+    });
 
     test('Vérification que la liste des pokémons s affiche suite au chargement des données dans la page Poké liste', async () => {
         render(<Provider store={store}>
@@ -85,11 +86,13 @@ describe('Premiers tests', () => {
 
         expect(await screen.findByRole('liste')).toBeInTheDocument();
     });
+});
 
+describe('Tests sur la page type pokémon', () => {
     test('Vérification que les mots Pokémon par type soient bien affichés sur la page Pokémon par type', () => {
-        const { getByText } = render(
+        const {getByText} = render(
             <Provider store={store}>
-                <PokemonType />
+                <PokemonType/>
             </Provider>
         );
 
@@ -105,7 +108,9 @@ describe('Premiers tests', () => {
 
         expect(await screen.findByRole('liste')).toBeInTheDocument();
     });
+});
 
+describe('Tests page mes favoris', () => {
     test('Vérification que les mots Mes favoris soient bien affiché sur la page Mes favoris', () => {
         const { queryAllByText } = render(
             <Provider store={store}>
@@ -114,5 +119,5 @@ describe('Premiers tests', () => {
         );
 
         expect(queryAllByText(/Mes favoris/i)).toBeTruthy();
-    })
-})
+    });
+});

@@ -8,16 +8,22 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - master
-
 jobs:
-  lint_and_test:
-    runs-on: ubuntu-latest
+  lint-and-test:
     name: Lint and test
+    runs-on: ubuntu-latest
+    environment: production
     steps:
-    - name: Test
-      run: |
-        npm run lint
-        npm run test -- --coverage
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: npm lint and test
+        run: |
+          npm install
+          npm run lint
+          npm run test -- --coverage
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
