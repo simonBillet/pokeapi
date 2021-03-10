@@ -18,8 +18,7 @@
 on:
   push:
     branches:
-      - develop
-  
+      - master
 
 env:
   AZURE_WEBAPP_NAME: lp-cdtl-devops-simon    # set this to your application's name
