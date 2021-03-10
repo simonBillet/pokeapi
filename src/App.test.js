@@ -55,9 +55,9 @@ describe('Tests sur la page d accueil', () => {
             <PokemonRandom/>
         </Provider>);
 
-        await userEvent.click(screen.getByRole('Ajouter-favoris'));
+        await userEvent.click(screen.queryByText('Ajouter à mes favoris'));
 
-        const estAjouter = await screen.findByRole('Supprimer-favoris');
+        const estAjouter = await screen.queryByText('Supprimer de mes favoris');
 
         expect(estAjouter).toBeTruthy();
     });

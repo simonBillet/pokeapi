@@ -49,9 +49,9 @@ export const PokemonRandom = () => {
         })
 
         if (estFavoris){
-            return (<button className={"card-detail-bouton-supprimer-favoris"} onClick={supprimerPokemonFavoris} role={"Supprimer-favoris"}>Supprimer de mes favoris</button>)
+            return (<button className={"card-detail-bouton-supprimer-favoris"} onClick={supprimerPokemonFavoris}>Supprimer de mes favoris</button>)
         } else {
-            return (<button className={"card-detail-bouton-ajouter-favoris"} onClick={ajouterPokemonFavoris} role={"Ajouter-favoris"}>Ajouter à mes favoris</button>)
+            return (<button className={"card-detail-bouton-ajouter-favoris"} onClick={ajouterPokemonFavoris}>Ajouter à mes favoris</button>)
         }
     }
 
