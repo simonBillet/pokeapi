@@ -9,7 +9,7 @@ export const Favoris = () => {
             <h2>Liste de mes favoris :</h2>
             <div className={"row"}>
                 <div className={"col-sm-8"}>
-                    <div className={"liste-pokemon"} role={"liste"}>
+                    <div className={"liste-pokemon"}>
                         <PokemonCardFavoris/>
                     </div>
                 </div>
