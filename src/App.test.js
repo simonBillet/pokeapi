@@ -31,14 +31,6 @@ describe('Tests sur la page d accueil', () => {
         expect(getByText(/Accueil/i)).toBeInTheDocument();
     });
 
-    test('On vérifie si le role status existe dans App', () => {
-        render(<Provider store={store}>
-            <App/>
-        </Provider>);
-
-        expect(screen.getByRole('status')).toBeInTheDocument();
-    });
-
     // Vérifier sur le component le plus petit (permet de trouver l'erreur le plus rapidement si il y en a)
     test('Vérification que le pokémon aléatoire s affiche suite au chargement des données', async () => {
         render(<Provider store={store}>
@@ -79,9 +71,11 @@ describe('Tests sur la page poke liste', () => {
             <PokeListe/>
         </Provider>);
 
-        expect(screen.queryByRole('liste')).toBeNull();
+        expect(screen.queryByAltText('pokemon')).toBeNull();
 
-        expect(await screen.findByRole('liste')).toBeInTheDocument();
+        const pokemon = await screen.findAllByAltText('pokemon');
+
+        expect(pokemon[0]).toBeInTheDocument();
     });
 });
 
@@ -101,9 +95,11 @@ describe('Tests sur la page type pokémon', () => {
             <PokemonType/>
         </Provider>);
 
-        expect(screen.queryByRole('liste')).toBeNull();
+        expect(screen.queryByAltText('pokemon')).toBeNull();
 
-        expect(await screen.findByRole('liste')).toBeInTheDocument();
+        const pokemon = await screen.findAllByAltText('pokemon');
+
+        expect(pokemon[0]).toBeInTheDocument();
     });
 });
 

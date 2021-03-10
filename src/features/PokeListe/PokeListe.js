@@ -1,7 +1,7 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {DetailPokemon} from "../Composants/DetailPokemon";
-import {PokemonCard} from "../PokemonParType/PokemonCard";
+import {PokemonCard} from "./PokemonCard";
 import {Spinner} from "../Composants/Spinner";
 import {
     requeteIndex,
@@ -52,7 +52,7 @@ export const PokeListe = () => {
                     </div>
                     {pokemons.length !== 0
                         ?
-                        <div className={"liste-pokemon"} role={"liste"}>
+                        <div className={"liste-pokemon"}>
                             {status === 'succès' ?<PokemonCard/> :<Spinner/>}
                         </div>
                         :<div></div>
