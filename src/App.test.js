@@ -1,16 +1,13 @@
 import React from 'react';
 import reducer, {
-    ajouterPokemonMesFavoris,
     initialState,
-    selectListeMesFavoris
 } from './features/Service/pokemonsSlice';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from './app/store';
 import {Accueil} from "./features/Accueil/Accueil";
 import App from "./App";
 import {PokemonRandom} from "./features/Accueil/PokemonRandom";
-import {PokemonCard} from "./features/PokemonParType/PokemonCard";
 import userEvent from "@testing-library/user-event";
 import {PokeListe} from "./features/PokeListe/PokeListe";
 import {PokemonType} from "./features/PokemonParType/PokemonType";
